@@ -35,9 +35,7 @@ MATCH (m: Movie {title: "A Few Good Men"}) WITH m MATCH (m) <- [:ACTED_IN] - (p:
 ```
 
 Afterwards we try to take the difference in the age between the actors who also acted in the movie, and use the aggregating function on those values. 
-
-Afterwards we can 
-
+Using these functions, we can see the similarites in between the nodes. 
 
 
 
