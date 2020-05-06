@@ -1,6 +1,6 @@
 # DatAssA4
 
-This project is based on the movie dataset example, found in the neo4j localhost browser.
+This project is based on the movie dataset example, found in the neo4j localhost browser. We have added the file to create the database.
 
 ### A) Identify the most important nodes, based on their relationships
 If the project is loaded in, use the following command to find the most important nodes. We have limited it to 5, and done it descending, giving you the most common node as the first.
