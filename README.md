@@ -9,7 +9,14 @@ MATCH (nodes)-[relations]-() RETURN nodes, COUNT(*) as relations ORDER BY COUNT(
 ```
 
 ### B) Detect the close connected communities of nodes
-
+```sql
+MATCH (u:Person)
+WITH u
+ORDER BY u.louvain
+WITH  u.louvain AS community, collect(u.name) AS people
+RETURN community, people[..10]
+ORDER BY size(people) DESC
+```
 
 ### C) Discover similarities between nodes, based on their properties or behaviour
 
