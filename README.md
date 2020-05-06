@@ -20,6 +20,27 @@ ORDER BY size(people) DESC
 
 ### C) Discover similarities between nodes, based on their properties or behaviour
 
+In order to find similarities between the different nodes i have tried to take one movie title as an observation and use the different aggregating functions to find the different data distribution between the nodes.
+
+First
+```sql
+MATCH (m: Movie {title: "A Few Good Men"}) WITH m MATCH (m) <- [:ACTED_IN] - (p:Person) RETURN min(m.released - p.born), avg(m.released - p.born), max(m.released - p.born)
+````
+
+`min(m.released)	avg(m.released)	max(m.released)
+1975	1998.2894736842106	2012`
+
+```sql
+MATCH (m: Movie {title: "A Few Good Men"}) WITH m MATCH (m) <- [:ACTED_IN] - (p:Person) RETURN min(m.released - p.born), avg(m.released - p.born), max(m.released - p.born)
+```
+
+Afterwards we try to take the difference in the age between the actors who also acted in the movie, and use the aggregating function on those values. 
+
+Afterwards we can 
+
+
+
+
 
 ### D) Find available routes or optimal paths between the nodes
 Run the following command to find the shortest path between 2 nodes (actors/directors/movies) of your choice by replacing the names.
